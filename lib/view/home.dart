@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -19,7 +18,7 @@ class HomeView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const CircleAvatar(
-                    radius: 30,
+                    radius: 25,
                     backgroundImage: NetworkImage(
                         'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'),
                   ),
@@ -59,18 +58,19 @@ class HomeView extends StatelessWidget {
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
               ),
               const SizedBox(
-                height: 30,
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  //first container
                   Stack(
                     children: [
                       Container(
                         height: 230,
                         width: 160,
                         decoration: BoxDecoration(
-                            color: Color(0xff343434),
+                            color: const Color(0xff343434),
                             borderRadius: BorderRadius.circular(30)),
                         child: Column(
                           children: [
@@ -127,6 +127,8 @@ class HomeView extends StatelessWidget {
                       )
                     ],
                   ),
+
+                  //second container
                   Stack(
                     children: [
                       Container(
@@ -200,6 +202,166 @@ class HomeView extends StatelessWidget {
                       ),
                     ],
                   )
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  //third container
+                  Stack(
+                    children: [
+                      Container(
+                        height: 230,
+                        width: 160,
+                        decoration: BoxDecoration(
+                            color: const Color(0xffc6eaff),
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Column(
+                          children: [
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Image.asset(
+                              'images/router.png',
+                              scale: 5,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text(
+                              "TP-LINK3200N",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text(
+                              "Router",
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff565454)),
+                            )
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                        top: 200,
+                        left: 45,
+                        child: Container(
+                          height: 40,
+                          width: 70,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.white),
+                        ),
+                      ),
+                      Positioned(
+                        top: 205,
+                        left: 50,
+                        child: Container(
+                          height: 25,
+                          width: 60,
+                          decoration: BoxDecoration(
+                              color: const Color(0xffe9ecf4),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Row(children: [
+                            Image.asset('images/switch_button.png'),
+                          ]),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  //fourth container
+                  Stack(
+                    children: [
+                      Container(
+                        height: 230,
+                        width: 160,
+                        decoration: BoxDecoration(
+                            color: const Color(0xffb4fbfb),
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Column(
+                          children: [
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Image.asset(
+                              'images/thermostat.png',
+                              scale: 5,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text(
+                              "Thermostats",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text(
+                              "Meter",
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff565454)),
+                            )
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                        top: 200,
+                        left: 45,
+                        child: Container(
+                          height: 40,
+                          width: 70,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Colors.white),
+                        ),
+                      ),
+                      Positioned(
+                        top: 205,
+                        left: 50,
+                        child: Container(
+                          height: 25,
+                          width: 60,
+                          decoration: BoxDecoration(
+                              color: const Color(0xffe9ecf4),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Row(children: [
+                            Image.asset('images/switch_button.png'),
+                          ]),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FloatingActionButton(
+                    onPressed: () {},
+                    child: const Icon(
+                      Icons.add,
+                      size: 25,
+                    ),
+                    backgroundColor: const Color(0xff53d7d7),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(100)),
+                  ),
                 ],
               )
             ],
