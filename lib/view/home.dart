@@ -61,7 +61,7 @@ class HomeView extends StatelessWidget {
                 height: 20,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   //first container
                   Stack(
@@ -208,7 +208,7 @@ class HomeView extends StatelessWidget {
                 height: 10,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   //third container
                   Stack(
